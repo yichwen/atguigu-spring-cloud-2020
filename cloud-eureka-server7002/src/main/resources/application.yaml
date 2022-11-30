@@ -1,0 +1,19 @@
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: eureka7002.com
+  client:
+    # false means do not register itself
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+#  server:
+    # configuration for disabling self-preservation
+    # the default value is true
+#    enable-self-preservation: false
+    # this property tells the Eureka server to run a job at this frequency to evict the expired clients
+    # the default value is 60 seconds
+#    eviction-interval-timer-in-ms: 2000
